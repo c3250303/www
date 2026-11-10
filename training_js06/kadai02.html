@@ -17,15 +17,12 @@
 <body>
 <h2>座席の予約</h2>
 <p>東京会場</p>
-<div id="book"><b>（予約受付中）</b><br></div>
-<div id="thankyou"><button onclick="booking()">予約する</button></div>
+<div id="thankyou"><b>（予約受付中）</b><br><button onclick="booking()">予約する</button></div>
 
 <script>
 function booking() {
-    let done = document.getElementByID('book');
-    done.innerHTML = '<b>（予約済み）<b><br>';
-    let thank = document.getElementByID('thankyou');
-    thank.innerHTML = '<b>ありがとうございました。<b>';
+    let thankBox = document.getElementByID('thankyou');
+    thankBox.innerHTML = '<b>（予約済み）<b><br><b>ありがとうございました。<b>';
 }
 </script>
 </body>
