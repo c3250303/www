@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>要素の取得と内容の変更</title>
+<style>
+    #book{
+        color: red;
+    }
+</style>
+</head>
+
+<body>
+<h2>座席の予約</h2>
+<p>東京会場<div id="book">（予約受付中）</div></p>
+<div id="thankyou"><button onclick="booking()">予約する</button></div>
+
+<script>
+function booking() {
+    let book = document.getElementByID('book');
+    book.innerHTML = '<b>（予約済み）<b>';
+    let thank = document.getElementByID('thankyou');
+    thank.innerHTML = '<b>ありがとうございました。<b>';
+}
+</script>
+</body>
+
+</html>
