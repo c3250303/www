@@ -11,8 +11,7 @@
 <script>
 function greetings(){
     const today = new Date();
-    const hour = now.getHours();
-    document.getElementById('text');
+    const hour = today.getHours();
     if(hour >= 5 && hour < 9){
         return text = "おはようございます";
     }else if(hour < 18){
@@ -21,6 +20,7 @@ function greetings(){
         return text = "こんばんは";
     }
 }
+document.getElementById("text").textContent = greetings();
 </script>
 </body>
 
