@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>7-2</title>
+<title>7-3</title>
 </head>
 
 <body>
@@ -25,10 +25,12 @@ function calculateResult(op1, op2, operator){
             result = op1 / op2;
             break;
         default:
-            throw new SyntaxError("演算子は「+,-,*,/,」の中から選んでください");
+            throw new SyntaxError("演算子は「+,-,*,/」の中から選んでください");
     }
     return result;
 }
+const result = calculateResult(10, 5, "+");
+document.getElementById("text").textContent = result;
 </script>
 </body>
 
