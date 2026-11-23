@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>7-3</title>
+</head>
+
+<body>
+<p id="text"></p>
+<script>
+const n = 100;
+
+for (let i = 2; i <= n; i++) {
+    if (!isPrime(i)) continue;
+    console.log(i);
+}
+
+function isPrime(n) {
+    if (n <= 3) {
+        return n > 1;
+    } else if (n % 2 === 0 || n % 3 === 0) {
+        return false;
+    }
+
+    let i = 5;
+
+    while (i * i <= n) {
+        if (n % i === 0 || n % (i + 2) === 0) {
+            return false;
+        }
+        i += 6;
+    }
+
+    return true;
+}
+</script>
+</body>
+
+</html>
