@@ -29,8 +29,12 @@ function calculateResult(op1, op2, operator){
     }
     return result;
 }
-const result = calculateResult(10, 5, "+");
+const op1 = Number(prompt("1つ目の数字"));
+const op2 = Number(prompt("2つ目の数字"));
+const operator = prompt("演算子「+,-,*,/」");
+const result = calculateResult(op1, op2, operator);
 document.getElementById("text").textContent = result;
+
 </script>
 </body>
 
