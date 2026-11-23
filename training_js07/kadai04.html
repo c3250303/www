@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>7-3</title>
+<title>7-4</title>
 </head>
 
 <body>
@@ -13,7 +13,7 @@ const n = 100;
 
 for (let i = 2; i <= n; i++) {
     if (!isPrime(i)) continue;
-    console.log(i);
+    document.getElementById("text").innerHTML += i + "<br>";
 }
 
 function isPrime(n) {
