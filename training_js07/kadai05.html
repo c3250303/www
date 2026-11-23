@@ -40,16 +40,16 @@ const betweenOrBound = (low, high, n) => {
 const a = Number(prompt("1つ目の数字"));
 const b = Number(prompt("2つ目の数字"));
 document.getElementById("text").innerHTML =
-    sum1(a, b) + "<br>" +
-    sum(a, b) + "<br>" +
-    fibo1(a) + "<br>" +
-    fibo1(b) + "<br>" +
-    fibo(a) + "<br>" +
-    fibo(b) + "<br>" +
-    betweenOrBound1(a, b, a) + "<br>" +
-    betweenOrBound1(a, b, b) + "<br>" +
-    betweenOrBound(a, b, a) + "<br>" +
-    betweenOrBound(a, b, b);
+    "sum(function) " + sum1(a, b) + "<br>" +
+    "sum(const) " + sum(a, b) + "<br>" +
+    "fibo(function) a " + fibo1(a) + "<br>" +
+    "fibo(function) b " + fibo1(b) + "<br>" +
+    "fibo(const) a " + fibo(a) + "<br>" +
+    "fibo(const) b " + fibo(b) + "<br>" +
+    "betweenOrBound(function) a " + betweenOrBound1(a, b, a) + "<br>" +
+    "betweenOrBound(function) b " + betweenOrBound1(a, b, b) + "<br>" +
+    "betweenOrBound(const) a " + betweenOrBound(a, b, a) + "<br>" +
+    "betweenOrBound(const) b " + betweenOrBound(a, b, b);
 </script>
 </body>
 
