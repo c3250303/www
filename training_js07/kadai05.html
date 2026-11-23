@@ -10,21 +10,21 @@
 <p id="text"></p>
 <script>
 
-function sum(a, b) {
+function sum1(a, b) {
     return a + b;
 }
 const sum = (a, b) => a + b;
 
 
-function fibo(n) {
+function fibo1(n) {
     if (n < 2) {
         return n;
     }
-    return fibo(n - 1) + fibo(n - 2);
+    return fibo1(n - 1) + fibo1(n - 2);
 }
 const fibo = (n) => n < 2 ? n : fibo(n - 1) + fibo(n - 2);
 
-function betweenOrBound(low, high, n) {
+function betweenOrBound1(low, high, n) {
     return n < low ? low : (n > high ? high : n);
 }
 
@@ -37,6 +37,19 @@ const betweenOrBound = (low, high, n) => {
     else
         return high;
 }
+const a = Number(prompt("1つ目の数字"));
+const b = Number(prompt("2つ目の数字"));
+document.getElementById("text").innerHTML =
+    "sum1(a, b) = " + sum(a, b) + "<br>" +
+    "sum(a, b) = " + sum(a, b) + "<br>" +
+    "fibo1(a) = " + fibo(a) + "<br>" +
+    "fibo1(b) = " + fibo(b) + "<br>" +
+    "fibo(a) = " + fibo(a) + "<br>" +
+    "fibo(b) = " + fibo(b) + "<br>" +
+    "betweenOrBound1(a, b, a) = " + betweenOrBound(a, b, a) + "<br>" +
+    "betweenOrBound1(a, b, b) = " + betweenOrBound(a, b, b) +
+    "betweenOrBound(a, b, a) = " + betweenOrBound(a, b, a) + "<br>" +
+    "betweenOrBound(a, b, b) = " + betweenOrBound(a, b, b);
 </script>
 </body>
 
