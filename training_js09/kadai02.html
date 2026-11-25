@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>9-2</title>
+</head>
+
+<body>
+<h1 class ="center">Click Counter ★ switch構文</h1>
+<p class ="center">ボタンをクリックすると、クリック回数に応じて結果が変わります。<br>JavaScriptのswitch構文を使って処理を作ってみましょう。</p>
+<p class ="center">クリック回数　<span id="count">0</span>回</p>
+<div class ="center">
+    <button onclick="countup()">クリック</button>
+<div>
+<p>結果</p>
+<p id="result">ここに結果が表示されます</p>
+
+<script>
+    let clickcount = 0;
+    function countup(){
+        clickcount++;
+        let result = "";
+        switch(clickcount){
+            case 1:
+                for(let i = 0; i < 1; i++){
+                result += "★";
+                }
+            break;
+            case 2:
+                for(let i = 0; i < 5; i++){
+                result += "★";
+                }
+            break;
+            case 3:
+                for(let i = 1; i <= 5; i++){
+                result += i + " ";
+                }
+            break;
+            case 4:
+                for(let i = 2; i <= 10; i += 2){
+                result += i + " ";
+                }
+            break;
+            case 5:
+                let sum = 0;
+                for(let i = 1; i <= clickcount; i++){
+                    sum += i ;
+                }
+            result = sum;
+            break;
+
+            default:
+                result = "クリアしました。カウントを0に戻します。"
+                clickcount = 0;
+        }
+        document.getElementById("result").textContent = result;
+        document.getElementById("count").textContent = clickcount;
+    }
+</script>
+
+<style>
+    .center{
+        text-align: center;
+    }
+    #result{
+        text-align: center;
+    }
+</style>
+
+</body>
+</html>
